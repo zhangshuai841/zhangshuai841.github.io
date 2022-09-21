@@ -1,2 +1,2 @@
 # zhangshuai841.github.io
-![image](https://github.com/AngelSXD/sxd_first_repository/blob/master/images/images/1.png)
+![image](https://github.com/zhangshuai841/zhangshuai841.github.io/edit/main/README.md/images/1.png)
