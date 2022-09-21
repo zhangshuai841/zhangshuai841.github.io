@@ -1,2 +1,2 @@
 # zhangshuai841.github.io
-![image]../image/1.png)
+![image]E:/image/1.png)
