@@ -1,0 +1,132 @@
+body {
+  user-select: none;
+}
+
+#game {
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+
+.option {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: #4682B4;
+  background-color: #F5DEB3;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 70px auto;
+  cursor: pointer;
+}
+
+.small {
+  width: 50px;
+}
+
+.big {
+  width: 60px;
+}
+
+.bg1 {
+  background: url('../img/bg1.jpg');
+}
+.bg2 {
+  background: url('../img/bg2.jpg');
+}
+.bg3 {
+  background: url('../img/bg3.jpg');
+}
+.bg4 {
+  background: url('../img/bg4.jpg');
+}
+
+.myPlane {
+  position: absolute;
+  width: 50px;
+}
+
+.plane-img {
+  width: 100%;
+}
+
+
+.enemy {
+  position: absolute;
+  width: 50px;
+}
+
+.enemy img {
+  width: 100%;
+}
+
+.biu {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+}
+
+.score {
+  text-align: center;
+  font-size: 20px;
+}
+
+.hp {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.small .hp{
+  width: 40px;
+  height: 6px;
+}
+
+.big .hp{
+  width: 50px;
+  height: 6px;
+}
+
+.hp div {
+  height: 100%;
+  width: 100%;
+  background: red;
+}
+
+.boom {
+  position: absolute;
+  /* animation: opacity_img 1s; */
+}
+
+@keyframes opacity_img {
+  0% {
+    opacity: 1;
+  }
+
+  25%{
+    opacity: 0.5;
+  }
+  
+  50%{
+    opacity: 1;
+  }
+  
+  75%{
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
