@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>第六期JS</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    .test {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: #000;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="score">0</div>
+  <div id="game">
+    <div class="enemy">
+      <img src="./img/enemy_small.png" alt="">
+    </div>
+  </div>
+  <div class="test">
+    <div><p></p></div>
+  </div>
+  
+  <script>
+    new Airplane({
+      app: '#game',
+      width: 520,
+      height: 770
+    }) 
+    
+    
+
+   
+
+  </script>
+</body>
+</html>
