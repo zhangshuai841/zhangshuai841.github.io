@@ -1,88 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<h1>静夜思</h1>
-	<img src="image/静夜思.png" alt="">
-	<ul>
-		<li>床前明月光</li>
-		<li>疑是地上霜</li>
-		<li>举头望明月</li>
-		<li>低头思故乡</li>
-	</ul>
-
-	<table border="1" cellspacing="0" width="500px">
-		<caption><h1>课程表</h1></caption>
-		<thead bgcolor="＃00BFFF">
-			<tr>
-				<th>节次\星期</th>
-				<th>星期一</th>
-				<th>星期二</th>
-				<th>星期三</th>
-				<th>星期四</th>
-				<th>星期五</th>
-				<th>星期六</th>
-				<th>星期日</th>
-			</tr>
-		</thead>
-		<tbody align="center">
-			<tr>
-				<td>1、2</td>
-				<td>语</td>
-				<td>数</td>
-				<td>英</td>
-				<td>理</td>
-				<td>化</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>3、4</td>
-				<td>语</td>
-				<td>数</td>
-				<td>英</td>
-				<td>理</td>
-				<td>化</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td colspan="8">午间休息</td>
-			</tr>
-			<tr>
-				<td>5、6</td>
-				<td>语</td>
-				<td>数</td>
-				<td>英</td>
-				<td>理</td>
-				<td>化</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>7、8</td>
-				<td>语</td>
-				<td>数</td>
-				<td>英</td>
-				<td>理</td>
-				<td>化</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>9、10</td>
-				<td colspan="7">自习时间</td>
-			</tr>
-		</tbody>
-		<tfoot align="center">
-			<tr>
-				<td colspan="8">本课程表适用于XXX班级，日期：XXX年XX月XX日</td>
-			</tr>
-		</tfoot>
-	</table>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- form标签用于定义表单，主要用于向服务器提交数据。
+		 action属性用于指定表单的提交地址（url）
+		 method属性用于指定表单的提交方式，有get/post两种提交方式
+		 enctype属性用于指定表单数据的编码类型。
+		 
+		 对于form表单项中的表单项标签，如果需要向服务器提交对应的数据，
+		 标签中必须添加name属性，否则在表单提交时，该项会被忽略。
+		 -->
+		<form action="#" method="get" enctype="multipart/form-data">
+			<!-- 常见的的表单项标签 -->
+			
+			<!-- input 表示输入框，type属性用于指定输入的数据类型 
+			required 规定此项为必填项
+			placeholder 占位文本
+			maxlength 设置填入的最大字符长度
+			value 设置默认值
+			readonly只读
+			-->
+			
+			用户名：
+			<!-- 普通文本输入框 -->
+			<input type="text" name="username" required placeholder="请输入用户名..." maxlength="6" value="张三" readonly>
+			<br>
+			
+			密码：
+			<!-- 密码框，有掩码效果 -->
+			<input type="password" name="pwd">
+			<br>
+			
+			年龄：
+			<!-- 数字框 -->
+			<input type="number" name="age">
+			<br>
+			
+			<!-- 同一组单选框/多选框的name属性值应保持一致，
+			 单选框和多选框不同于其他的输入框，只能选择，不能输入内容，
+			 因此我们需要通过value属性为单选框和多选框设置要提交的值，
+			 如果不设置，默认提交on
+			 如果想设置某个标签默认被选中，在该标签中添加checked属性即可
+			 -->
+			性别：
+			<input type="radio" name="gender" value="男" checked id="n">
+			<label for="n">男</label>
+			<input type="radio" name="gender" value="女" id="r">
+			<!-- label标签通常和input标签一起使用，为input标签定义标记，
+			 当用户点击label标签中的文本时，浏览器会自动将焦点转到与该标签
+			 相关联的表单控件上。
+			 label标签的for属性值应当与相关元素的id属性值相同。-->
+			<label for="r">女</label>
+			<br>
+			
+			爱好：
+			<!-- 多选框 -->
+			<input type="checkbox" name="hobby" value="eat">吃饭
+			<input type="checkbox" name="hobby" value="sleep">睡觉
+			<input type="checkbox" name="hobby" value="java">学java
+			<br>
+			
+			生日：
+			<!-- 日期框 -->
+			<input type="date" name="birthday">
+			<br>
+			
+			附件：
+			<!-- 文件框 -->
+			<input type="file" name="file">
+			<br>
+			
+			城市：
+			<!-- select 下拉选框
+			 下拉选中的每一个选项都是一个option，如果某个选项被选中，并且该选项
+			 上添加了value属性，在提交表单时会提交其value属性值，如果没有添加
+			 value属性，则直接提交option标签中的内容
+			 selected属性用于设置当前option标签默认被选中-->
+			<select name="city" id="">
+				<option value="cc">长春</option>
+				<option>吉林</option>
+				<option selected>松原</option>
+			</select>
+			<br>
+			
+			自我描述：
+			<!-- textarea 文本域
+			 文本框只能输入单行文本，文本域可以输入多行文本，
+			 rows属性用于设置行数（高度），cols属性用于设置列数（宽度），
+			 当使用placeholder指定占位文本时，textarea开始标签和结束标签之间
+			 不能有任何内容，包含空格和换行，否则不显示占位文本，直接显示标签中间
+			 的内容。-->
+			<textarea name="self" id="" cols="30" rows="10" placeholder="请添加描述信息..."></textarea>
+			<br>
+			
+			邮箱：
+			<!-- 电子邮件输入框 -->
+			<input type="email" name="email">
+			<br>
+			
+			<!-- input标签的type属性值为submit时提交按钮，
+			 用于将表单中的数据提交到服务器-->
+			<input type="submit">
+			<!-- 重置按钮 -->
+			
+			<input type="reset">
+			<!-- input标签的type属性值为button时为自定义按钮，
+			 通过value属性设置按钮上显示的文本。
+			 自定义按钮本身没有任何功能，需要用过js添加功能-->
+			<input type="button" value="自定义按钮">
+			
+			<!-- button 按钮标签
+			 按钮上的显示文本写在开始标签和结束标签之间。
+			 本身也不具备功能，但是与form表单标签一起使用时可以实现
+			 提交的效果-->
+			<button>自定义按钮2</button>
+		</form>
+		
+		<button>自定义按钮3</button>
+	</body>
 </html>
