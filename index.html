@@ -5,120 +5,73 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- form标签用于定义表单，主要用于向服务器提交数据。
-		 action属性用于指定表单的提交地址（url）
-		 method属性用于指定表单的提交方式，有get/post两种提交方式
-		 enctype属性用于指定表单数据的编码类型。
-		 
-		 对于form表单项中的表单项标签，如果需要向服务器提交对应的数据，
-		 标签中必须添加name属性，否则在表单提交时，该项会被忽略。
-		 -->
 		<form action="#" method="get" enctype="multipart/form-data">
-			<!-- 常见的的表单项标签 -->
-			
-			<!-- input 表示输入框，type属性用于指定输入的数据类型 
-			required 规定此项为必填项
-			placeholder 占位文本
-			maxlength 设置填入的最大字符长度
-			value 设置默认值
-			readonly只读
-			-->
-			
-			用户名：
-			<!-- 普通文本输入框 -->
-			<input type="text" name="username" required placeholder="请输入用户名..." maxlength="6" value="张三" readonly>
-			<br>
-			
-			密码：
-			<!-- 密码框，有掩码效果 -->
-			<input type="password" name="pwd">
-			<br>
-			
-			年龄：
-			<!-- 数字框 -->
-			<input type="number" name="age">
-			<br>
-			
-			<!-- 同一组单选框/多选框的name属性值应保持一致，
-			 单选框和多选框不同于其他的输入框，只能选择，不能输入内容，
-			 因此我们需要通过value属性为单选框和多选框设置要提交的值，
-			 如果不设置，默认提交on
-			 如果想设置某个标签默认被选中，在该标签中添加checked属性即可
-			 -->
-			性别：
-			<input type="radio" name="gender" value="男" checked id="n">
-			<label for="n">男</label>
-			<input type="radio" name="gender" value="女" id="r">
-			<!-- label标签通常和input标签一起使用，为input标签定义标记，
-			 当用户点击label标签中的文本时，浏览器会自动将焦点转到与该标签
-			 相关联的表单控件上。
-			 label标签的for属性值应当与相关元素的id属性值相同。-->
-			<label for="r">女</label>
-			<br>
-			
-			爱好：
-			<!-- 多选框 -->
-			<input type="checkbox" name="hobby" value="eat">吃饭
-			<input type="checkbox" name="hobby" value="sleep">睡觉
-			<input type="checkbox" name="hobby" value="java">学java
-			<br>
-			
-			生日：
-			<!-- 日期框 -->
-			<input type="date" name="birthday">
-			<br>
-			
-			附件：
-			<!-- 文件框 -->
-			<input type="file" name="file">
-			<br>
-			
-			城市：
-			<!-- select 下拉选框
-			 下拉选中的每一个选项都是一个option，如果某个选项被选中，并且该选项
-			 上添加了value属性，在提交表单时会提交其value属性值，如果没有添加
-			 value属性，则直接提交option标签中的内容
-			 selected属性用于设置当前option标签默认被选中-->
-			<select name="city" id="">
-				<option value="cc">长春</option>
-				<option>吉林</option>
-				<option selected>松原</option>
-			</select>
-			<br>
-			
-			自我描述：
-			<!-- textarea 文本域
-			 文本框只能输入单行文本，文本域可以输入多行文本，
-			 rows属性用于设置行数（高度），cols属性用于设置列数（宽度），
-			 当使用placeholder指定占位文本时，textarea开始标签和结束标签之间
-			 不能有任何内容，包含空格和换行，否则不显示占位文本，直接显示标签中间
-			 的内容。-->
-			<textarea name="self" id="" cols="30" rows="10" placeholder="请添加描述信息..."></textarea>
-			<br>
-			
-			邮箱：
-			<!-- 电子邮件输入框 -->
-			<input type="email" name="email">
-			<br>
-			
-			<!-- input标签的type属性值为submit时提交按钮，
-			 用于将表单中的数据提交到服务器-->
-			<input type="submit">
-			<!-- 重置按钮 -->
-			
-			<input type="reset">
-			<!-- input标签的type属性值为button时为自定义按钮，
-			 通过value属性设置按钮上显示的文本。
-			 自定义按钮本身没有任何功能，需要用过js添加功能-->
-			<input type="button" value="自定义按钮">
-			
-			<!-- button 按钮标签
-			 按钮上的显示文本写在开始标签和结束标签之间。
-			 本身也不具备功能，但是与form表单标签一起使用时可以实现
-			 提交的效果-->
-			<button>自定义按钮2</button>
+		<table border="1" cellspacing="0" width="800px" height="500px" align="center">
+			<tr>
+				<td align="right"> 
+					用户名：
+				</td>
+				<td>
+					<input type="text" name="username" required placeholder="请输入用户名" maxlength="6">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">密码：</td>
+				<td><input type="password" name="pwd" required placeholder="请输入密码"></td>
+			</tr>
+			<tr>
+				<td align="right">确认密码：</td>
+				<td><input type="password" name="pwd" required placeholder="请再次输入密码"></td>
+			</tr>
+			<tr>
+				<td align="right">验证码：</td>
+				<td><input type="text" name="yzm" required placeholder="请输入验证码" maxlength="4"></td>
+			</tr>
+			<tr>
+				<td align="right">性别：</td>
+				<td>
+					<input type="radio" name="gender" value="男" id="n">
+					<label for="n">男</label>
+					<input type="radio" name="gender" value="女" id="r">
+					<label for="r">女</label>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">年龄：</td>
+				<td><input type="number" name="age" required placeholder="请输入年龄"></td>
+			</tr>
+			<tr>
+				<td align="right">爱好：</td>
+				<td>
+					<select name="hobby">
+						<option selected>购物</option>
+						<option>学习</option>
+						<option>旅游</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">你喜欢的游戏：</td>
+				<td>
+					<input type="checkbox" name="geme" value="cf">穿越火线
+					<input type="checkbox" name="game" value="lol">英雄联盟
+					<input type="checkbox" name="game" value="wzry">王者荣耀
+					<input type="checkbox" name="game" value="kxxxl">开心消消乐
+				</td>
+			</tr>
+			<tr>
+				<td align="right">邮箱：</td>
+				<td><input type="email" name="email" required placeholder="请输入邮箱"></td>
+			</tr>
+			<tr>
+				<td align="right">邮箱密码：</td>
+				<td><input type="password" name="epwd" required placeholder="请输入邮箱密码"></td>
+			</tr>
+			<tr>
+				<td align="right"><input type="submit" value="提交"></td>
+				<td><input type="reset" value="重置"></td>
+			</tr>
+		</table>
 		</form>
-		
-		<button>自定义按钮3</button>
 	</body>
 </html>
