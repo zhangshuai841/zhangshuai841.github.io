@@ -5,73 +5,52 @@
 		<title></title>
 	</head>
 	<body>
-		<form action="#" method="get" enctype="multipart/form-data">
-		<table border="1" cellspacing="0" width="800px" height="500px" align="center">
-			<tr>
-				<td align="right"> 
-					用户名：
-				</td>
-				<td>
-					<input type="text" name="username" required placeholder="请输入用户名" maxlength="6">
-				</td>
-			</tr>
-			<tr>
-				<td align="right">密码：</td>
-				<td><input type="password" name="pwd" required placeholder="请输入密码"></td>
-			</tr>
-			<tr>
-				<td align="right">确认密码：</td>
-				<td><input type="password" name="tpwd" required placeholder="请再次输入密码"></td>
-			</tr>
-			<tr>
-				<td align="right">验证码：</td>
-				<td><input type="text" name="yzm" required placeholder="请输入验证码" maxlength="4"></td>
-			</tr>
-			<tr>
-				<td align="right">性别：</td>
-				<td>
-					<input type="radio" name="gender" value="男" id="n">
-					<label for="n">男</label>
-					<input type="radio" name="gender" value="女" id="r">
-					<label for="r">女</label>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">年龄：</td>
-				<td><input type="number" name="age" required placeholder="请输入年龄"></td>
-			</tr>
-			<tr>
-				<td align="right">爱好：</td>
-				<td>
-					<select name="hobby">
-						<option selected>购物</option>
-						<option>学习</option>
-						<option>旅游</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">你喜欢的游戏：</td>
-				<td>
-					<input type="checkbox" name="geme" value="cf">穿越火线
-					<input type="checkbox" name="game" value="lol">英雄联盟
-					<input type="checkbox" name="game" value="wzry">王者荣耀
-					<input type="checkbox" name="game" value="kxxxl">开心消消乐
-				</td>
-			</tr>
-			<tr>
-				<td align="right">邮箱：</td>
-				<td><input type="email" name="email" required placeholder="请输入邮箱"></td>
-			</tr>
-			<tr>
-				<td align="right">邮箱密码：</td>
-				<td><input type="password" name="epwd" required placeholder="请输入邮箱密码"></td>
-			</tr>
-			<tr>
-				<td align="right"><input type="submit" value="提交"></td>
-				<td><input type="reset" value="重置"></td>
-			</tr>
-		</table>
-		</form>
+		
+		<style type="text/css">
+			.u1{
+				list-style: none;
+			}
+			#div6{
+				background: url(image/自拍.png) no-repeat center;
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				border-radius: 50%;
+			}
+			.d1{
+				width: 100px;
+				height: 50px;
+				border: 1px solid;
+				font-size: 20px;
+				color: white;
+				background-color: deeppink;
+				text-align: center;
+				float: left;
+				margin-left: 10px;
+				border-radius: 10px;
+				line-height: 50px;
+			}
+			.d1:hover{
+				background-color: aqua;
+			}
+
+		</style>		
+		<div id="div6"></div>
+		
+		<ul>
+			<li><a href="https://www.w3school.com.cn/">W3school</a></li>
+			<li><a href="https://www.runoob.com/">菜鸟教程</a></li>
+			<li><a href="https://www.cnblogs.com/">博客园</a></li>
+			<li><a href="https://www.csdn.net/">CSDN</a></li>
+			<li><a href="https://segmentfault.com/">思否</a></li>
+		</ul>
+		
+		<ul class="u1">
+			<li><a href="https://www.w3school.com.cn/"><div class="d1" id="div1">W3school</div></a></li>
+			<li><a href="https://www.runoob.com/"><div class="d1" id="div2">菜鸟教程</div></a></li>
+			<li><a href="https://www.cnblogs.com/"><div class="d1" id="div3">博客园</div></a></li>
+			<li><a href="https://www.csdn.net/"><div class="d1" id="div4">CSDN</div></a></li>
+			<li><a href="https://segmentfault.com/"><div class="d1" id="div5">思否</div></a></li>
+		</ul>
 	</body>
 </html>
