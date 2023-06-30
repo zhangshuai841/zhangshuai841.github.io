@@ -4,53 +4,25 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<body>
+	<body>		
+		<!-- 打开页面3秒后弹框提示“时间到”
+		 用户点击确定后开始加载图片，每隔一秒加载一张（图片用同一张即可）
+		 加载到10张停止-->
+		 
+		 <script type="text/javascript">
+			 setTimeout(function(){
+				 alert("时间到！");
+				 let count = 0;
+				 let timer = setInterval(function(){
+					 document.write("<image/3.jpg'>");
+					 count++;
+					if(count == 10000){
+						clearInterval(timer);
+					}
+				 },10);
+			 },1);
+			 
+		 </script>
 		
-		<style type="text/css">
-			.u1{
-				list-style: none;
-			}
-			#div6{
-				background: url(image/自拍.png) no-repeat center;
-				width: 300px;
-				height: 300px;
-				border: 1px solid red;
-				border-radius: 50%;
-			}
-			.d1{
-				width: 100px;
-				height: 50px;
-				border: 1px solid;
-				font-size: 20px;
-				color: white;
-				background-color: deeppink;
-				text-align: center;
-				float: left;
-				margin-left: 10px;
-				border-radius: 10px;
-				line-height: 50px;
-			}
-			.d1:hover{
-				background-color: aqua;
-			}
-
-		</style>		
-		<div id="div6"></div>
-		
-		<ul>
-			<li><a href="https://www.w3school.com.cn/">W3school</a></li>
-			<li><a href="https://www.runoob.com/">菜鸟教程</a></li>
-			<li><a href="https://www.cnblogs.com/">博客园</a></li>
-			<li><a href="https://www.csdn.net/">CSDN</a></li>
-			<li><a href="https://segmentfault.com/">思否</a></li>
-		</ul>
-		
-		<ul class="u1">
-			<li><a href="https://www.w3school.com.cn/"><div class="d1" id="div1">W3school</div></a></li>
-			<li><a href="https://www.runoob.com/"><div class="d1" id="div2">菜鸟教程</div></a></li>
-			<li><a href="https://www.cnblogs.com/"><div class="d1" id="div3">博客园</div></a></li>
-			<li><a href="https://www.csdn.net/"><div class="d1" id="div4">CSDN</div></a></li>
-			<li><a href="https://segmentfault.com/"><div class="d1" id="div5">思否</div></a></li>
-		</ul>
 	</body>
 </html>
