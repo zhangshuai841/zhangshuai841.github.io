@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>小帅的作业😘</title>
-	</head>
-	<body>
-		<h1 align="center">华创 JHC2309 关棋元</h1>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>嘻嘻</title>
+</head>
+<body>
+
+<button onclick="myFunction()" align:center>关棋元是🐖吗？</button>
+
+<p id="demo"></p>
+</body>
+<script>
+  function myFunction() {
+    let text;
+    if (confirm("猜一猜!") == true) {
+      text = "你猜对了!";
+    } else {
+      text = "你猜错了!请再试试😄";
+    }
+    document.getElementById("demo").innerHTML = text;
+  }
+</script>
 </html>
